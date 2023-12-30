@@ -119,3 +119,12 @@ const morningGlory: ShortPoem = {
 	kigo: "morningGlory",
 	type: "haiku",
 };
+
+interface WordCounts {
+	[value: string]: string;
+}
+
+let counts: WordCounts = {};
+
+counts.apple = "hello";
+counts.pear = "ither";
