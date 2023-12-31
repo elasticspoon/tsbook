@@ -1,2 +1,11 @@
-// Write your unique function here! ✨
-// You'll need to export it so the tests can run it.
+export function unique<T>(...arrays: T[][]) {
+	const set = new Set<T>();
+
+	for (let array of arrays) {
+		for (let v of array) {
+			set.add(v);
+		}
+	}
+
+	return [...set.keys()];
+}

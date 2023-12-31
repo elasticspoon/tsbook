@@ -1,2 +1,3 @@
-// Write your pickMany function here! ✨
-// You'll need to export it so the tests can run it.
+export function pickMany<C, K extends keyof C>(container: C, keys: K[]) {
+	return keys.map((key) => container[key]);
+}

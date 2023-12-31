@@ -1,2 +1,14 @@
-// Write your zip function here! ✨
-// You'll need to export it so the tests can run it.
+export function zip<T, U>(a: T[], b: U[]): (T | U)[] {
+	const res = [];
+
+	for (let i = 0; i < Math.max(a.length, b.length); i++) {
+		if (a[i]) {
+			res.push(a[i]);
+		}
+		if (b[i]) {
+			res.push(b[i]);
+		}
+	}
+
+	return res;
+}
