@@ -3,11 +3,11 @@
 declare global {
 	interface Array<T> {
 		smoosh(): string;
-		unsmoosh(): string[];
+		// unsmoosh(): string[];
 	}
 
 	interface String {
-		alternating(): [string, string];
+		// alternating(): [string, string];
 	}
 }
 
