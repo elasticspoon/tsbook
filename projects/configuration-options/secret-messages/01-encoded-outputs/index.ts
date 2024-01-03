@@ -1,5 +1,3 @@
-// Write your types here! ✨
-
 export function encodeMessage(message: string) {
 	let output = "";
 

@@ -1,12 +1,10 @@
-// Add your type annotations here! ✨
-
 import { words } from "./words";
 
-async function seconds(amount) {
+async function seconds(amount: number) {
 	await new Promise((resolve) => setTimeout(resolve, amount * 1000));
 }
 
-async function speakLines(lines: (number | string)[]) {
+async function speakLines(lines: (number | string | undefined)[]) {
 	for (const line of lines) {
 		if (typeof line === "string") {
 			console.log(line);
@@ -18,7 +16,7 @@ async function speakLines(lines: (number | string)[]) {
 }
 
 function generateLines(quantity: number) {
-	const lines = [generateLine("Lorem ipsum")];
+	const lines: (string | undefined | number)[] = [generateLine("Lorem ipsum")];
 
 	for (let i = 0; i < quantity - 1; i += 1) {
 		lines.push(generateLine());
@@ -31,7 +29,7 @@ function generateLines(quantity: number) {
 	return lines;
 }
 
-function generateLine(prefix) {
+function generateLine(prefix?: string) {
 	const words: string[] = prefix ? [prefix] : [];
 	const quantity = randomInt(3, 10);
 
