@@ -1,8 +1,8 @@
-import { Colors } from "./colors";
+import { Color } from "./colors";
 import { rhymes } from "./rhymes";
 
-export function makeRhyme(color: keyof typeof Colors) {
-	const value = Colors[color];
+export function makeRhyme(color: keyof typeof Color) {
+	const value = Color[color];
 	const [third, fourth] = rhymes[value];
 
 	console.log(`Roses are red,`);
